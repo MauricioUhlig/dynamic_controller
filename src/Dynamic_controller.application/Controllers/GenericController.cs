@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace application.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api2")]
     public class GenericController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

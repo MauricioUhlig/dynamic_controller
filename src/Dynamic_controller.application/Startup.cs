@@ -41,7 +41,11 @@ namespace application
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(name: "api2",
+                pattern: "api2/{*}",
+                defaults: new { Controller = "Generic" });
+                endpoints.MapControllerRoute(name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
